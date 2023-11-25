@@ -17,8 +17,10 @@ export default class TodoInput extends Component {
                 value={item}
                 onChange={handleChange}
               />
-              <button type="submit" className="btn btn-primary btn-lg">
-                add item
+              <button type="submit"
+               disabled={item?false:true}
+               className={editItem? "btn btn-success btn-lg":"btn btn-primary btn-lg"}>
+                {editItem ? 'edit item':'add item'}
               </button>
             </InputGroup>
           </div>
